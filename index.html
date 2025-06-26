@@ -376,6 +376,41 @@
             overflow: hidden;
             box-shadow: var(--md-sys-elevation-1);
             margin-bottom: 40px;
+            position: relative;
+        }
+
+        .resume-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .resume-download-link {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 5;
+        }
+
+        .resume-download-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 28px;
+            font-weight: 500;
+            box-shadow: var(--md-sys-elevation-2);
+            transition: all 0.3s var(--md-sys-motion-standard);
+        }
+
+        .resume-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--md-sys-elevation-3);
         }
 
         .resume-toggle {
@@ -414,6 +449,10 @@
 
         .resume-content.active {
             max-height: 3000px; /* Arbitrary large value to ensure content fits */
+        }
+
+        .resume-content-open {
+            padding: 24px;
         }
 
         .resume-section {
@@ -589,6 +628,11 @@
 
             .resume-date {
                 margin-top: 4px;
+            }
+
+            .resume-download-btn {
+                padding: 8px 12px;
+                font-size: 14px;
             }
         }
     </style>
@@ -864,10 +908,12 @@
     <h2 class="section-title">Professional Experience</h2>
 
     <div class="resume-container">
-<!--        <button class="resume-toggle" onclick="toggleResume()">-->
-<!--            <span>View Resume</span>-->
-<!--            <span class="material-symbols-rounded">expand_more</span>-->
-<!--        </button>-->
+        <div class="resume-download-link">
+            <a href="ericlivesayresume.docx" download class="resume-download-btn">
+                <span class="material-symbols-rounded">download</span>
+                <span>Download CV</span>
+            </a>
+        </div>
 
         <div class="resume-content-open" id="resumeContent">
             <div class="resume-section">
@@ -936,62 +982,35 @@
                 <div class="resume-item">
                     <div class="resume-item-header">
                         <h4>Senior Data Engineer</h4>
-                        <span class="resume-date">9/2015 - Present</span>
+                        <span class="resume-date">9/2015 – Present</span>
                     </div>
                     <h5>Simpli.fi Holdings, Fort Worth, TX</h5>
-                    <p>Creating programmatic solutions for enabling reporting and analysis in a Big Data environment
-                        (billions of records). Data warehouse design and implementation using Vertica and Hadoop.
-                        Investigations and troubleshooting with SQL, Jupyter Notebooks with PySpark, and Kafka.</p>
+                    <p>Creating programmatic solutions for enabling reporting and analysis in a Big Data environment (billions of records). Data warehouse design and implementation using Vertica and Hadoop. Investigations and troubleshooting with SQL, Jupyter Notebooks with PySpark, and Kafka.</p>
                     <ul class="resume-list">
-                        <li>Created a reporting solution that uses billions of records of data to show a dashboard that
-                            has been used to help gather client into the platform that had not been on board in years.
-                            This reporting tool helped to generate almost $1 million in RFPs in a week's time.
-                        </li>
-                        <li>Currently building out three products using AI models:
-                            <ul class="resume-list">
-                                <li>"ChatZTV" - Uses AI to translate plain speech requests in Simpli.fi's UI to
-                                    targeting options and filters focused on the Zip CTV campaign type.
-                                </li>
-                                <li>An 'Autotagger' using several AI Transformer based models and embeddings to tag
-                                    video and image ads based on particular categories.
-                                </li>
-                                <li>A slackbot powered by AI and MCP to gathering reporting insights from our Looker
-                                    instance and answer reporting and data analysis questions in a slack channel.
-                                </li>
-                            </ul>
-                        </li>
-                        <li> Helped establish and now facilitate the AI ‘Practice’ at Simpli.fi - a group discussing best engineering
-practices and issues around AI</li>
-                        <li>Created a solution that makes it easy for us to load large third-party cookie/segment files
-                            into Hadoop, along with their segment descriptions.
-                        </li>
+                        <li>Created a reporting solution that uses billions of records of data to show a dashboard that has been used to help gather client into the platform that had not been on board in years. This reporting tool helped to generate almost $1 million in RFPs in a week's time.</li>
+                        <li>Currently building out three products using AI models: "ChatZTV", an "Autotagger" using several AI Transformer based models, and a slackbot powered by AI and MCP.</li>
+                        <li>Helped establish and now facilitate the AI 'Practice' at Simpli.fi - a group discussing best engineering practices and issues around AI</li>
+                        <li>Created a solution that makes it easy to load large third-party cookie/segment files into Hadoop, along with their segment descriptions.</li>
                         <li>Created several innovative dashboards for showing Simpli.fi and Facebook data trends.</li>
-                        <li>Lead the design and development of our Facebook/omni channel data mart and reporting in our
-                            data warehouse.
-                        </li>
+                        <li>Lead the design and development of Facebook / omni channel data mart and reporting in our data warehouse.</li>
                     </ul>
                 </div>
 
                 <div class="resume-item">
                     <div class="resume-item-header">
                         <h4>Data Engineer</h4>
-                        <span class="resume-date">6/2013 - 9/2015</span>
+                        <span class="resume-date">6/2013 – 9/2015</span>
                     </div>
                     <h5>HP (DOD & NMCI- Navy and Marine Corps Intranet), San Diego, California</h5>
-                    <p>Re-hired back to the Data Engineering/Services team as an SME for SAP Business Objects, and for
-                        the existing Oracle data warehouse and reporting implementation.</p>
+                    <p>Re-hired back to the Data Engineering/Services team as an SME for SAP Business Objects, and for the existing Oracle data warehouse and reporting implementation.</p>
                     <ul class="resume-list">
-                        <li>Restored functionality to the development environment during several outages by leveraging
-                            my knowledge of the existing solution.
-                        </li>
+                        <li>Restored functionality to the development environment during several outages.</li>
                         <li>Completed two refreshes of the Business Objects environment in the development lab.</li>
-                        <li>Assisted with several production outages by providing technical expertise and understanding
-                            of the solution architecture.
-                        </li>
+                        <li>Assisted with several production outages by providing technical expertise.</li>
                     </ul>
                 </div>
-
-                <div class="resume-item">
+<!--            </div>-->
+            <div class="resume-item">
                     <div class="resume-item-header">
                         <h4>Business Intelligence Engineer</h4>
                         <span class="resume-date">5/2011 - 6/2013</span>
@@ -1057,12 +1076,13 @@ practices and issues around AI</li>
                 </div>
             </div>
 
+
             <div class="resume-section">
                 <h3 class="resume-section-title">Education</h3>
                 <div class="resume-item">
                     <div class="resume-item-header">
-                        <h4>Bachelor of Science - Computer Science</h4>
-                        <span class="resume-date">Graduated 12/2002</span>
+                        <h4>Bachelor of Science − Computer Science</h4>
+                        <span class="resume-date">12/2002</span>
                     </div>
                     <h5>San Diego State University, California</h5>
                 </div>
@@ -1075,20 +1095,22 @@ practices and issues around AI</li>
     <div class="footer-content">
         <div class="footer-section">
             <h3 class="footer-title">About Me</h3>
-            <p>Experienced developer creating innovative solutions with AI, mobile technologies, and enterprise
-                systems.</p>
+            <p>Experienced developer creating innovative solutions with AI, mobile technologies, and enterprise applications. Passionate about solving complex problems with elegant code.</p>
         </div>
         <div class="footer-section">
             <h3 class="footer-title">Contact</h3>
             <ul class="footer-links">
-                <li><a href="mailto:elivesay@gmail.com">elivesay@gmail.com</a></li>
-                <li><a href="tel:+8583616480">+1 (858) 361-6480</a></li>
+                <li>Email: contact@example.com</li>
+                <li>Phone: (555) 123-4567</li>
+                <li>Location: Fort Worth, TX</li>
             </ul>
         </div>
         <div class="footer-section">
             <h3 class="footer-title">Connect</h3>
             <ul class="footer-links">
-                <li><a href="https://www.linkedin.com/in/ericlivesay/">LinkedIn</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
             </ul>
         </div>
     </div>
@@ -1098,20 +1120,6 @@ practices and issues around AI</li>
 </footer>
 
 <script>
-    function toggleResume() {
-        const resumeContent = document.getElementById('resumeContent');
-        const resumeToggle = document.querySelector('.resume-toggle');
-
-        resumeContent.classList.toggle('active');
-        resumeToggle.classList.toggle('active');
-
-        if (resumeToggle.classList.contains('active')) {
-            resumeToggle.querySelector('span:first-child').textContent = 'Hide Resume';
-        } else {
-            resumeToggle.querySelector('span:first-child').textContent = 'View Resume';
-        }
-    }
-
     function toggleTechDetails(button) {
         const techContent = button.nextElementSibling;
         button.classList.toggle('active');
