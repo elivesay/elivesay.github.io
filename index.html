@@ -38,6 +38,7 @@
             --md-sys-typescale-title-large-size: 1.5rem;
             --md-sys-typescale-body-large-size: 1rem;
             --md-sys-typescale-body-medium-size: 0.875rem;
+            --md-sys-typescale-headline-small-size: 1.5rem;
 
             /* Elevation Values */
             --md-sys-elevation-1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
@@ -640,25 +641,22 @@
 
                 <div class="tech-details-content">
                     <h4 class="tech-details-title">Technical Implementation</h4>
-                    <p>A mobile app utilizing Gemini API with a Flutter frontend and Firebase backend for connecting
+                    <p>Created the BACK END services utilizing Gemini API and Firebase backend for connecting
                         users to support services.</p>
 
                     <div class="tech-architecture">
                         <h5>Architecture Overview</h5>
                         <ul class="tech-list">
-                            <li>Flutter mobile application with Material 3 design</li>
                             <li>Firebase backend with Firestore for data storage</li>
-                            <li>Vector embeddings for semantic search capabilities</li>
+                            <li>Firestore Vector embeddings for semantic search capabilities</li>
                             <li>Gemini API integration for natural language understanding</li>
-                            <li>Location-based service discovery and recommendations</li>
+                            <li>Firebase Cloud Functions for API</li>
                         </ul>
                     </div>
 
                     <div class="tech-stack">
                         <h5>Technology Stack</h5>
                         <div class="tech-tags">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Dart</span>
                             <span class="tech-tag">Firebase</span>
                             <span class="tech-tag">Firestore</span>
                             <span class="tech-tag">Gemini API</span>
@@ -685,9 +683,9 @@
                 <p class="project-tech">Technologies: Python, FastAPI, Looker SDK, MCP, SSE, PDF Processing</p>
                 <ul class="features-list">
                     <li>Conversational AI interface to Looker reporting data</li>
-                    <li>Dashboard search and download capabilities</li>
-                    <li>Dynamic query generation from natural language</li>
-                    <li>PDF rendering and text extraction</li>
+                    <li>Dashboard metadata search and download capabilities</li>
+                    <li>Model, explore, and field level data and metadata extraction from Looker</li>
+                    <li>Running dashboards and text data extraction form dashboards</li>
                 </ul>
 
                 <button class="tech-details-toggle" onclick="toggleTechDetails(this)">
@@ -866,12 +864,12 @@
     <h2 class="section-title">Professional Experience</h2>
 
     <div class="resume-container">
-        <button class="resume-toggle" onclick="toggleResume()">
-            <span>View Resume</span>
-            <span class="material-symbols-rounded">expand_more</span>
-        </button>
+<!--        <button class="resume-toggle" onclick="toggleResume()">-->
+<!--            <span>View Resume</span>-->
+<!--            <span class="material-symbols-rounded">expand_more</span>-->
+<!--        </button>-->
 
-        <div class="resume-content" id="resumeContent">
+        <div class="resume-content-open" id="resumeContent">
             <div class="resume-section">
                 <h3 class="resume-section-title">Professional Summary</h3>
                 <p>Seasoned Data Engineer with over 16 years of experience, known for driving business solutions through
@@ -962,6 +960,8 @@
                                 </li>
                             </ul>
                         </li>
+                        <li> Helped establish and now facilitate the AI ‘Practice’ at Simpli.fi - a group discussing best engineering
+practices and issues around AI</li>
                         <li>Created a solution that makes it easy for us to load large third-party cookie/segment files
                             into Hadoop, along with their segment descriptions.
                         </li>
