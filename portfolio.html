@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing AI, mobile, and enterprise projects">
+    <title>Professional Portfolio | AI & Enterprise Solutions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200"/>
+    <style>
+        :root {
+            /* M3 Color System */
+            --md-sys-color-primary: #006783;
+            --md-sys-color-on-primary: #ffffff;
+            --md-sys-color-primary-container: #c1e8ff;
+            --md-sys-color-on-primary-container: #001f29;
+            --md-sys-color-secondary: #4c616b;
+            --md-sys-color-on-secondary: #ffffff;
+            --md-sys-color-secondary-container: #cfe6f1;
+            --md-sys-color-on-secondary-container: #071e26;
+            --md-sys-color-tertiary: #5e5a7d;
+            --md-sys-color-on-tertiary: #ffffff;
+            --md-sys-color-tertiary-container: #e4dfff;
+            --md-sys-color-on-tertiary-container: #1a1736;
+            --md-sys-color-surface: #f8fafb;
+            --md-sys-color-surface-variant: #dce4e8;
+            --md-sys-color-on-surface: #191c1e;
+            --md-sys-color-on-surface-variant: #40484c;
+            --md-sys-color-outline: #70787d;
+            --md-sys-color-shadow: rgba(0, 0, 0, 0.14);
+
+            /* Typography Scale */
+            --md-sys-typescale-display-large-size: 3.5rem;
+            --md-sys-typescale-display-medium-size: 2.8rem;
+            --md-sys-typescale-headline-large-size: 2rem;
+            --md-sys-typescale-headline-medium-size: 1.75rem;
+            --md-sys-typescale-title-large-size: 1.5rem;
+            --md-sys-typescale-body-large-size: 1rem;
+            --md-sys-typescale-body-medium-size: 0.875rem;
+
+            /* Elevation Values */
+            --md-sys-elevation-1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+            --md-sys-elevation-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+
+            /* Animation */
+            --md-sys-motion-standard: cubic-bezier(0.2, 0, 0, 1);
+            --md-sys-motion-duration-medium: 400ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--md-sys-color-surface);
+            color: var(--md-sys-color-on-surface);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--md-sys-elevation-2);
+            z-index: 100;
+        }
+
+        .topbar h1 {
+            font-size: var(--md-sys-typescale-headline-medium-size);
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--md-sys-color-on-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s var(--md-sys-motion-standard);
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 24px;
+            background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+            color: var(--md-sys-color-on-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://source.unsplash.com/1600x900/?technology,abstract');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: var(--md-sys-typescale-display-large-size);
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: var(--md-sys-typescale-headline-medium-size);
+            margin-bottom: 32px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background-color: var(--md-sys-color-on-primary);
+            color: var(--md-sys-color-primary);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 28px;
+            font-size: var(--md-sys-typescale-body-large-size);
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: var(--md-sys-elevation-1);
+            transition: all 0.2s var(--md-sys-motion-standard);
+        }
+
+        .cta-button:hover {
+            box-shadow: var(--md-sys-elevation-2);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .section-title {
+            font-size: var(--md-sys-typescale-headline-large-size);
+            color: var(--md-sys-color-primary);
+            margin-bottom: 32px;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--md-sys-elevation-1);
+            transition: all 0.3s var(--md-sys-motion-standard);
+        }
+
+        .project-card:hover {
+            box-shadow: var(--md-sys-elevation-3);
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            height: 200px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image.ai {
+            background: linear-gradient(45deg, #7e57c2, #2196f3);
+        }
+
+        .project-image.business {
+            background: linear-gradient(45deg, #26a69a, #42a5f5);
+        }
+
+        .project-image.enterprise {
+            background: linear-gradient(45deg, #5c6bc0, #26c6da);
+        }
+
+        .project-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 64px;
+            color: white;
+        }
+
+        .project-content {
+            padding: 24px;
+        }
+
+        .project-type {
+            display: inline-block;
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: var(--md-sys-typescale-body-medium-size);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-size: var(--md-sys-typescale-title-large-size);
+            margin-bottom: 12px;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .project-description {
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .project-tech {
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 16px;
+        }
+
+        .features-list {
+            list-style-type: none;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .features-list li::before {
+            content: "check_circle";
+            font-family: 'Material Symbols Rounded';
+            position: absolute;
+            left: 0;
+            color: var(--md-sys-color-primary);
+        }
+
+        /* Technical Details Styles */
+        .tech-details-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--md-sys-color-surface-variant);
+            color: var(--md-sys-color-on-surface-variant);
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 16px;
+            margin-top: 16px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s var(--md-sys-motion-standard);
+        }
+
+        .tech-details-toggle:hover {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+        }
+
+        .tech-details-toggle .material-symbols-rounded {
+            transition: transform 0.3s var(--md-sys-motion-standard);
+        }
+
+        .tech-details-toggle.active .material-symbols-rounded {
+            transform: rotate(90deg);
+        }
+
+        .tech-details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s var(--md-sys-motion-standard);
+            padding: 0 16px;
+        }
+
+        .tech-details-content.active {
+            max-height: 1000px;
+            padding: 16px;
+            margin-top: 16px;
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            border: 1px solid var(--md-sys-color-outline);
+        }
+
+        .tech-details-title {
+            font-size: var(--md-sys-typescale-title-large-size);
+            color: var(--md-sys-color-primary);
+            margin-bottom: 16px;
+        }
+
+        .tech-architecture, .tech-stack, .tech-workflow {
+            margin-bottom: 20px;
+        }
+
+        .tech-architecture h5, .tech-stack h5, .tech-workflow h5 {
+            font-size: var(--md-sys-typescale-body-large-size);
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 8px;
+        }
+
+        .tech-list, .workflow-list {
+            padding-left: 24px;
+        }
+
+        .tech-list li, .workflow-list li {
+            margin-bottom: 8px;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background-color: var(--md-sys-color-tertiary-container);
+            color: var(--md-sys-color-on-tertiary-container);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: var(--md-sys-typescale-body-medium-size);
+            font-weight: 500;
+        }
+
+        /* Resume Section Styles */
+        .resume-container {
+            background-color: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--md-sys-elevation-1);
+            margin-bottom: 40px;
+        }
+
+        .resume-toggle {
+            width: 100%;
+            background-color: var(--md-sys-color-surface-variant);
+            color: var(--md-sys-color-on-surface-variant);
+            border: none;
+            padding: 16px 24px;
+            font-size: var(--md-sys-typescale-title-large-size);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s var(--md-sys-motion-standard);
+        }
+
+        .resume-toggle:hover {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+        }
+
+        .resume-toggle .material-symbols-rounded {
+            transition: transform 0.3s var(--md-sys-motion-standard);
+        }
+
+        .resume-toggle.active .material-symbols-rounded {
+            transform: rotate(180deg);
+        }
+
+        .resume-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s var(--md-sys-motion-standard);
+        }
+
+        .resume-content.active {
+            max-height: 3000px; /* Arbitrary large value to ensure content fits */
+        }
+
+        .resume-section {
+            padding: 24px;
+            border-bottom: 1px solid var(--md-sys-color-surface-variant);
+        }
+
+        .resume-section:last-child {
+            border-bottom: none;
+        }
+
+        .resume-section-title {
+            color: var(--md-sys-color-primary);
+            font-size: var(--md-sys-typescale-headline-medium-size);
+            margin-bottom: 16px;
+        }
+
+        .resume-item {
+            margin-bottom: 24px;
+        }
+
+        .resume-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .resume-item-header h4 {
+            font-size: var(--md-sys-typescale-title-large-size);
+            color: var(--md-sys-color-on-surface);
+            font-weight: 500;
+        }
+
+        .resume-date {
+            color: var(--md-sys-color-on-surface-variant);
+            font-weight: 500;
+        }
+
+        .resume-item h5 {
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: var(--md-sys-typescale-body-large-size);
+            margin-bottom: 12px;
+        }
+
+        .resume-list {
+            list-style-type: none;
+        }
+
+        .resume-list li {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .resume-list li::before {
+            content: "arrow_right";
+            font-family: 'Material Symbols Rounded';
+            position: absolute;
+            left: 0;
+            color: var(--md-sys-color-primary);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .skill-category h4 {
+            font-size: var(--md-sys-typescale-title-large-size);
+            margin-bottom: 12px;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .skills-list {
+            list-style-type: none;
+        }
+
+        .skills-list li {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 16px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: var(--md-sys-typescale-body-medium-size);
+        }
+
+        .footer {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+            padding: 48px 24px;
+            margin-top: 64px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-title {
+            font-size: var(--md-sys-typescale-headline-medium-size);
+            margin-bottom: 16px;
+            color: var(--md-sys-color-primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--md-sys-color-on-secondary-container);
+            transition: color 0.2s var(--md-sys-motion-standard);
+        }
+
+        .footer-links a:hover {
+            color: var(--md-sys-color-primary);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 48px;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: var(--md-sys-typescale-display-medium-size);
+            }
+
+            .hero p {
+                font-size: var(--md-sys-typescale-headline-small-size);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .resume-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .resume-date {
+                margin-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="topbar">
+    <h1>Eric Livesay's Portfolio</h1>
+    <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Data and AI Engineer</h1>
+        <p>Specializing in AI, Data, and Enterprise Applications</p>
+    </div>
+</section>
+
+<main class="container" id="projects">
+    <h2 class="section-title">A Few Featured Projects</h2>
+
+    <div class="projects-grid">
+        <!-- Journey Hub Project -->
+        <article class="project-card">
+            <div class="project-image ai">
+                <div class="project-image-overlay">
+                    <span class="project-icon material-symbols-rounded">smartphone</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-type">AI/Mobile App</div>
+                <h3 class="project-title">Journey Hub</h3>
+                <p class="project-description">An AI-powered app that connects those in need with local support services
+                    using Gemini API and vector search capabilities.</p>
+                <p class="project-tech">Technologies: Gemini API, Flutter, Firestore, Vector Search, Python,
+                    Instructor</p>
+                <ul class="features-list">
+                    <li>Metropolitan area-specific AI searches</li>
+                    <li>Vector index with embeddings for intent recognition</li>
+                    <li>Real-time location-based assistance</li>
+                </ul>
+
+                <button class="tech-details-toggle" onclick="toggleTechDetails(this)">
+                    <span>Technical Details</span>
+                    <span class="material-symbols-rounded">code</span>
+                </button>
+
+                <div class="tech-details-content">
+                    <h4 class="tech-details-title">Technical Implementation</h4>
+                    <p>A mobile app utilizing Gemini API with a Flutter frontend and Firebase backend for connecting
+                        users to support services.</p>
+
+                    <div class="tech-architecture">
+                        <h5>Architecture Overview</h5>
+                        <ul class="tech-list">
+                            <li>Flutter mobile application with Material 3 design</li>
+                            <li>Firebase backend with Firestore for data storage</li>
+                            <li>Vector embeddings for semantic search capabilities</li>
+                            <li>Gemini API integration for natural language understanding</li>
+                            <li>Location-based service discovery and recommendations</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h5>Technology Stack</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Firestore</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Vector Search</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Looker MCP Server Project -->
+        <article class="project-card">
+            <div class="project-image enterprise">
+                <div class="project-image-overlay">
+                    <span class="project-icon material-symbols-rounded">data_exploration</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-type">AI/Data Integration</div>
+                <h3 class="project-title">Looker MCP Server</h3>
+                <p class="project-description">An AI-powered FastAPI server that enables natural language interactions
+                    with Looker business intelligence data, allowing users to query reports and dashboards through
+                    conversational interfaces.</p>
+                <p class="project-tech">Technologies: Python, FastAPI, Looker SDK, MCP, SSE, PDF Processing</p>
+                <ul class="features-list">
+                    <li>Conversational AI interface to Looker reporting data</li>
+                    <li>Dashboard search and download capabilities</li>
+                    <li>Dynamic query generation from natural language</li>
+                    <li>PDF rendering and text extraction</li>
+                </ul>
+
+                <button class="tech-details-toggle" onclick="toggleTechDetails(this)">
+                    <span>Technical Details</span>
+                    <span class="material-symbols-rounded">code</span>
+                </button>
+
+                <div class="tech-details-content">
+                    <h4 class="tech-details-title">Technical Implementation</h4>
+                    <p>A FastAPI-based server that integrates Multimodal Conversational Platform (MCP) with Looker SDK
+                        to enable AI-powered interactions with business intelligence data.</p>
+
+                    <div class="tech-architecture">
+                        <h5>Architecture Overview</h5>
+                        <ul class="tech-list">
+                            <li>FastAPI server with Server-Sent Events (SSE) for real-time communication</li>
+                            <li>Integration with Looker SDK for accessing reporting data</li>
+                            <li>MCP tooling for natural language processing and AI capabilities</li>
+                            <li>Explore, dashboard, and field level metadata extraction from Looker.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h5>Technology Stack</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Looker SDK</span>
+                            <span class="tech-tag">FastMCP Library</span>
+                            <span class="tech-tag"></span>
+                            <span class="tech-tag">SSE with Starlette</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-workflow">
+                        <h5>Workflow</h5>
+                        <ol class="workflow-list">
+                            <li>MCP Clients/agents can use MCP server to extract info from Looker</li>
+                            <li>MCP server exposes Looker models, explores, dashboards and field info.</li>
+                            <li>Server calls Looker SDK methods to retrieve requested information</li>
+                            <li>For dashboard requests, the system extracts the info from the dashboard as text</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- ZipAdviser AI Campaign Setup Project -->
+        <article class="project-card">
+            <div class="project-image business">
+                <div class="project-image-overlay">
+                    <span class="project-icon material-symbols-rounded">campaign</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-type">AI/Business Solution</div>
+                <h3 class="project-title">ZipAdviser AI Campaign Setup</h3>
+                <p class="project-description">An AI-powered solution that simplifies campaign setup by translating
+                    plain text requests into targeting options and filters.</p>
+                <p class="project-tech">Technologies: AI/ML, Natural Language Processing, Campaign Management, UI/UX</p>
+                <ul class="features-list">
+                    <li>Plain speech to targeting options translation</li>
+                    <li>Streamlined campaign setup process</li>
+                    <li>Automated demographic filter selection</li>
+                    <li>Enhanced user experience for complex configurations</li>
+                </ul>
+
+                <button class="tech-details-toggle" onclick="toggleTechDetails(this)">
+                    <span>Technical Details</span>
+                    <span class="material-symbols-rounded">code</span>
+                </button>
+
+                <div class="tech-details-content">
+                    <h4 class="tech-details-title">Technical Implementation</h4>
+                    <p>The solution consists of an internal API endpoint that accepts requests from the web app (or
+                        other tools in the future) and translates plain text using AI Large Language Models.</p>
+
+                    <div class="tech-architecture">
+                        <h5>Architecture Overview</h5>
+                        <ul class="tech-list">
+                            <li>Internal API endpoint accepts plain text queries</li>
+                            <li>Leverages LLM (Gemini or OpenAI) to parse natural language into structured data</li>
+                            <li>Returns demographic filters in JSON format</li>
+                            <li>Filters are used in ZipAdviser and sent to Verble or Looker</li>
+                            <li>Supports message_history for conversational interactions</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h5>Technology Stack</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Nomad</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">RESTful API</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-workflow">
+                        <h5>Workflow</h5>
+                        <ol class="workflow-list">
+                            <li>User enters plain text query in web app</li>
+                            <li>Request is sent to internal API endpoint</li>
+                            <li>Endpoint forwards request to appropriate LLM with system instructions</li>
+                            <li>LLM processes text and extracts demographic filters</li>
+                            <li>JSON response is returned and used to filter ZipAdviser query</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Business and Operational Support System (BOSS) Project -->
+        <article class="project-card">
+            <div class="project-image enterprise">
+                <div class="project-image-overlay">
+                    <span class="project-icon material-symbols-rounded">analytics</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-type">Enterprise BI</div>
+                <h3 class="project-title">Business and Operational Support System</h3>
+                <p class="project-description">The first enterprise BI solution at NMCI using HP DecisionCenter with
+                    Business Objects XI for ITIL v3 and ISO certification.</p>
+                <p class="project-tech">Technologies: HP DecisionCenter, Business Objects XI, IIS, SQL Server 2005,
+                    Oracle 10g, ITIL v3</p>
+                <ul class="features-list">
+                    <li>Enterprise-level business intelligence solution</li>
+                    <li>ITIL v3 and ISO certification preparation</li>
+                    <li>Multi-technology integration</li>
+                    <li>Mission-critical Navy infrastructure support</li>
+                </ul>
+
+                <button class="tech-details-toggle" onclick="toggleTechDetails(this)">
+                    <span>Technical Details</span>
+                    <span class="material-symbols-rounded">code</span>
+                </button>
+
+                <div class="tech-details-content">
+                    <h4 class="tech-details-title">Technical Implementation</h4>
+                    <p>An enterprise-grade BI solution designed to support mission-critical infrastructure across Navy
+                        Marine Corps Intranet.</p>
+
+                    <div class="tech-architecture">
+                        <h5>Architecture Overview</h5>
+                        <ul class="tech-list">
+                            <li>Multi-tier architecture with web interface and database backends</li>
+                            <li>ETL processes for data aggregation from multiple sources</li>
+                            <li>Reporting framework using Business Objects XI</li>
+                            <li>Integration with ITIL v3 service management processes</li>
+                            <li>ISO certification compliance monitoring</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h5>Technology Stack</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HP DecisionCenter</span>
+                            <span class="tech-tag">Business Objects XI</span>
+                            <span class="tech-tag">SQL Server 2005</span>
+                            <span class="tech-tag">Oracle 10g</span>
+                            <span class="tech-tag">IIS</span>
+                            <span class="tech-tag">ITIL v3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+    </div>
+</main>
+
+<section class="container" id="resume">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <div class="resume-container">
+        <button class="resume-toggle" onclick="toggleResume()">
+            <span>View Resume</span>
+            <span class="material-symbols-rounded">expand_more</span>
+        </button>
+
+        <div class="resume-content" id="resumeContent">
+            <div class="resume-section">
+                <h3 class="resume-section-title">Professional Summary</h3>
+                <p>Seasoned Data Engineer with over 16 years of experience, known for driving business solutions through
+                    innovative problem solving and technical acuity. Demonstrates a strong knack for swiftly mastering
+                    emerging technologies and deploying them in the service of business efficiencies. Recognized for
+                    remarkable persistence. Valuable recent experience creating solutions using AI technologies.</p>
+            </div>
+
+            <div class="resume-section">
+                <h3 class="resume-section-title">Areas of Expertise</h3>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Data Engineering</h4>
+                        <ul class="skills-list">
+                            <li>Looker</li>
+                            <li>Spark/PySpark</li>
+                            <li>Vertica</li>
+                            <li>Airflow</li>
+                            <li>Tableau</li>
+                            <li>Google BigQuery</li>
+                            <li>SQL Server Analysis Services</li>
+                            <li>SQL Server Integration Services</li>
+                            <li>Microsoft Performance Point</li>
+                            <li>Microsoft Reporting Services</li>
+                            <li>Microstrategy Reporting Services</li>
+                            <li>SAP Business Objects</li>
+                            <li>NLP</li>
+                            <li>Data Modeling</li>
+                            <li>Kafka</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Application Programming</h4>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>Postgres</li>
+                            <li>SQL Server</li>
+                            <li>Oracle pl-sql</li>
+                            <li>PyQt</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Artificial Intelligence</h4>
+                        <ul class="skills-list">
+                            <li>PGVector</li>
+                            <li>Sentence Transformers</li>
+                            <li>BlipModel (vision)</li>
+                            <li>Embeddings</li>
+                            <li>RAG</li>
+                            <li>NLP</li>
+                            <li>LLMs</li>
+                            <li>Prompt Engineering</li>
+                            <li>Mistral LLM</li>
+                            <li>Vertex AI</li>
+                            <li>Bison LLM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3 class="resume-section-title">Work Experience</h3>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Senior Data Engineer</h4>
+                        <span class="resume-date">9/2015 - Present</span>
+                    </div>
+                    <h5>Simpli.fi Holdings, Fort Worth, TX</h5>
+                    <p>Creating programmatic solutions for enabling reporting and analysis in a Big Data environment
+                        (billions of records). Data warehouse design and implementation using Vertica and Hadoop.
+                        Investigations and troubleshooting with SQL, Jupyter Notebooks with PySpark, and Kafka.</p>
+                    <ul class="resume-list">
+                        <li>Created a reporting solution that uses billions of records of data to show a dashboard that
+                            has been used to help gather client into the platform that had not been on board in years.
+                            This reporting tool helped to generate almost $1 million in RFPs in a week's time.
+                        </li>
+                        <li>Currently building out three products using AI models:
+                            <ul class="resume-list">
+                                <li>"ChatZTV" - Uses AI to translate plain speech requests in Simpli.fi's UI to
+                                    targeting options and filters focused on the Zip CTV campaign type.
+                                </li>
+                                <li>An 'Autotagger' using several AI Transformer based models and embeddings to tag
+                                    video and image ads based on particular categories.
+                                </li>
+                                <li>A slackbot powered by AI and MCP to gathering reporting insights from our Looker
+                                    instance and answer reporting and data analysis questions in a slack channel.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Created a solution that makes it easy for us to load large third-party cookie/segment files
+                            into Hadoop, along with their segment descriptions.
+                        </li>
+                        <li>Created several innovative dashboards for showing Simpli.fi and Facebook data trends.</li>
+                        <li>Lead the design and development of our Facebook/omni channel data mart and reporting in our
+                            data warehouse.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Data Engineer</h4>
+                        <span class="resume-date">6/2013 - 9/2015</span>
+                    </div>
+                    <h5>HP (DOD & NMCI- Navy and Marine Corps Intranet), San Diego, California</h5>
+                    <p>Re-hired back to the Data Engineering/Services team as an SME for SAP Business Objects, and for
+                        the existing Oracle data warehouse and reporting implementation.</p>
+                    <ul class="resume-list">
+                        <li>Restored functionality to the development environment during several outages by leveraging
+                            my knowledge of the existing solution.
+                        </li>
+                        <li>Completed two refreshes of the Business Objects environment in the development lab.</li>
+                        <li>Assisted with several production outages by providing technical expertise and understanding
+                            of the solution architecture.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Business Intelligence Engineer</h4>
+                        <span class="resume-date">5/2011 - 6/2013</span>
+                    </div>
+                    <h5>Genoptix, a Novartis Company, San Diego, California</h5>
+                    <p>Performed relational and dimensional cube database design, development, and optimization in data
+                        warehouse environments, with a focus on dimensional star-schema design techniques.</p>
+                    <ul class="resume-list">
+                        <li>Created a role-based dynamic security solution for our Sales team which works with the SSAS
+                            cubes and is integrated with Active Directory.
+                        </li>
+                        <li>Created a solution to synch AD group memberships with our sales management database using
+                            PowerShell and SSIS.
+                        </li>
+                        <li>Took the initiative to create a Business Intelligence department wiki page.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Data Engineer</h4>
+                        <span class="resume-date">6/2008 - 5/2011</span>
+                    </div>
+                    <h5>HP (DOD & NMCI- Navy and Marine Corps Intranet), San Diego, California</h5>
+                    <p>Created Business Intelligence solutions using SQL programming, database design, Microsoft BI
+                        stack, and various reporting tools.</p>
+                    <ul class="resume-list">
+                        <li>Became the 'Go to' guy for business intelligence in my group.</li>
+                        <li>Played a key role in overcoming integration hurdles for the latest business intelligence
+                            solution to support the internal Navy infrastructure.
+                        </li>
+                        <li>Created a SSO (Single-Sign-On) solution to integrate with HP Decision Center that meets
+                            government security regulations using CAC card enforcement.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3 class="resume-section-title">Previous Experience</h3>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Solutions Engineer</h4>
+                        <span class="resume-date">12/2006 - 5/2008</span>
+                    </div>
+                    <h5>Kintera, Inc., San Diego, California</h5>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Programmer (Contract)</h4>
+                        <span class="resume-date">9/2006 - 12/2006</span>
+                    </div>
+                    <h5>Commonwealth Financial Network, San Diego, California</h5>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>IT Systems Support III</h4>
+                        <span class="resume-date">11/2004 - 4/2006</span>
+                    </div>
+                    <h5>Remec (Powerwave Technologies), Poway, California</h5>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3 class="resume-section-title">Education</h3>
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <h4>Bachelor of Science - Computer Science</h4>
+                        <span class="resume-date">Graduated 12/2002</span>
+                    </div>
+                    <h5>San Diego State University, California</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer" id="contact">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="footer-title">About Me</h3>
+            <p>Experienced developer creating innovative solutions with AI, mobile technologies, and enterprise
+                systems.</p>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+                <li><a href="mailto:elivesay@gmail.com">elivesay@gmail.com</a></li>
+                <li><a href="tel:+8583616480">+1 (858) 361-6480</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Connect</h3>
+            <ul class="footer-links">
+                <li><a href="https://www.linkedin.com/in/ericlivesay/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Professional Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleResume() {
+        const resumeContent = document.getElementById('resumeContent');
+        const resumeToggle = document.querySelector('.resume-toggle');
+
+        resumeContent.classList.toggle('active');
+        resumeToggle.classList.toggle('active');
+
+        if (resumeToggle.classList.contains('active')) {
+            resumeToggle.querySelector('span:first-child').textContent = 'Hide Resume';
+        } else {
+            resumeToggle.querySelector('span:first-child').textContent = 'View Resume';
+        }
+    }
+
+    function toggleTechDetails(button) {
+        const techContent = button.nextElementSibling;
+        button.classList.toggle('active');
+        techContent.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            button.querySelector('span:first-child').textContent = 'Hide Technical Details';
+        } else {
+            button.querySelector('span:first-child').textContent = 'Technical Details';
+        }
+    }
+</script>
+</body>
+</html>
