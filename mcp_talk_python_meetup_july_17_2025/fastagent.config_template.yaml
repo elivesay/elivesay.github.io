@@ -41,3 +41,10 @@ mcp:
         atlassian:
             command: "npx"
             args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
+        slack:
+            command: "npx"
+            args: ["-y", "shouting-mcp-slack"]
+            env:
+                SLACK_BOT_TOKEN: <your-token-here>
+                SLACK_TEAM_ID: <your slack team id>
+                SLACK_CHANNEL_IDS: <your slack channel id>
